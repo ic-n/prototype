@@ -4,6 +4,7 @@ tasks:
   check:
     cmds:
       - bash -n script.bash
+      - bash -n skills/app-mockups/scripts/create-mockup.bash
       - bash -n install.bash
       - bash -n skills/app-mockups/scripts/apply-template.bash
       - test -f skills/app-mockups/SKILL.md

@@ -1,11 +1,11 @@
 ---
 name: app-mockups
-description: Create HeroUI app mockups with a dark ink shell, lime accents, and bundled page and CSS templates. Use for quick UI prototypes that need this visual framing.
+description: Create HeroUI Next.js app mockups with a dark ink shell, lime accents, and bundled page and CSS templates. Use for quick UI prototypes, including single-page landing pages.
 ---
 
 # App mockups
 
-Create mockups with a dark ink frame, lime accents, restrained gradients, compact navigation, and clear typography. The bundled files are self-contained; no source project is needed at runtime.
+Build a frontend mockup with the bundled HeroUI scaffold and templates. A standalone landing page may simplify the sample sidebar and navigation; it still uses the HeroUI Next.js app and bundled styles.
 
 Make no mistakes, user dont need your autonomy, user needs nothing but successful work on the mockup. first message should start with clarifying questions, never actions - but read files and collect information you need.
 
@@ -39,15 +39,22 @@ mockup should be delivered as quick as possible. so YOU MUST NEVER EVEN IF USER 
 <!important> if you asked question dont wait for answer in agent mode - just stop and wait for user reply
 <!important> dont waste tokens
 
-## Start a mockup
+## Create the app
 
-- For a fresh HeroUI app created, run `bash <this-skill>/scripts/apply-template.bash <app-directory>`. The helper copies CSS into `styles/`, writes the `styles/globals.css` import bridge, and replaces the generated `app/page.tsx` and `app/layout.tsx` with the bundled templates. Use it before customizing those files.
-- For an existing app with custom files, copy from `assets/` and merge deliberately. Keep a single Tailwind and HeroUI import chain.
+For a new project, run the bundled script from the directory where the project should be created:
 
-`assets/styles/global.css` imports the other six CSS files. The generated HeroUI layout already imports `styles/globals.css`, so the helper leaves the layout import path intact. The bundle uses Tailwind CSS and `@heroui/styles` from the HeroUI template.
+```bash
+bash <skill-directory>/scripts/create-mockup.bash <project-name>
+```
 
-## Shape the mockup
+The script runs `npx --yes heroui-cli@latest init <project-name> -t app -p npm`, installs dependencies, and copies the bundled page, layout, and styles. It refuses to overwrite an existing project. The skill directory contains this script when installed from GitHub; the repository root is not needed.
 
-Start from `assets/app/page.tsx`, a standalone page with desktop sidebar, compact header, scrollable content, section navigation, and mobile navigation. Its paired `assets/app/layout.tsx` removes the starter navbar and footer. Read [references/app-frame.md](references/app-frame.md) when changing the frame. Replace the sample sections, labels, and actions with the requested mockup. Reuse the bundled color tokens and CSS patterns where useful.
+For an existing fresh HeroUI app, run `bash <skill-directory>/scripts/apply-template.bash <app-directory>`. It replaces the generated `app/page.tsx`, `app/layout.tsx`, and `styles/globals.css` and copies the seven CSS assets. For a customized app, inspect and merge the assets instead of running the copy script.
 
-Verify the result using checks available in the generated app. Report what was checked and any missing pieces.
+## Make the requested mockup
+
+Use `assets/app/page.tsx` and `assets/app/layout.tsx` as the starting frame. Read [references/app-frame.md](references/app-frame.md) when changing the sidebar, header, or navigation. Replace the sample sections, labels, and controls with the user's content and requested behavior. Keep the mockup frontend-only, using hardcoded data or React state for local interactions.
+
+Ask for clarification only when a missing choice blocks the requested screen. Once the user chooses a landing page or visual-only controls, implement that choice without reopening it. Do not create a separate static HTML project or a new validation task in place of the HeroUI app.
+
+Use checks already available in the generated app and report what they verified. Keep the work focused on the requested mockup.
