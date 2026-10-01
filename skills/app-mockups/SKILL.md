@@ -9,7 +9,7 @@ Build a frontend mockup with the bundled HeroUI scaffold and templates. A standa
 
 Make no mistakes, user dont need your autonomy, user needs nothing but successful work on the mockup. first message should start with clarifying questions, never actions - but read files and collect information you need.
 
-you may read files and check something without asking. dont answer the question you ask by your own, actually wait for user to answer that. ask user to decide material choices before work begins, including layouts and components. under no circumstances, if you ask a question, do not proceed on an assumed answer. stop imediatly. never cheat by asking question and keep thinking. stop after the question and wait user to answer it.
+you may read files and check something without asking. dont answer the question you ask by your own, actually wait for user to answer that. ask user to decide material choices before work begins, including layouts and components. under no circumstances, if you ask a question, do not proceed on an assumed answer. stop imediatly. never cheat by asking question and keep thinking. stop after the question and wait user to answer it. but never say "I'm waiting for your choice before ...", state the questions you have in the reply
 
 at each checkpoint, wait for user's explicit instruction. do not add components, details, or completion requirements on your own. report what is verified and what is not, without turning your preferred verification into user's definition of done. use checkpoints:
 
@@ -38,6 +38,7 @@ mockup should be delivered as quick as possible. so YOU MUST NEVER EVEN IF USER 
 
 <!important> if you asked question dont wait for answer in agent mode - just stop and wait for user reply
 <!important> dont waste tokens
+<!important> never say "I’m waiting for your choice before ..." - repeat the questions in ordered list
 
 ## Create the app
 
