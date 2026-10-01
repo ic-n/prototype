@@ -1,0 +1,58 @@
+* {
+  scrollbar-color: #96ffae22 #96ffae03;
+  scrollbar-width: thin;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  color-scheme: dark;
+  background: #081317;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100dvh;
+}
+
+.app h1,
+.app h2,
+.app h3,
+.app h4,
+.app h5,
+.app h6 {
+  font-family: var(--font-display);
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-brand-400);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  transform: translateY(-5rem);
+  border-radius: 0.25rem;
+  background: var(--color-brand-400);
+  padding: 0.65rem 0.9rem;
+  color: var(--color-ink-950);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

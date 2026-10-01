@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+@import "./theme.css";
+@import "./base.css";
+@import "./app-shell.css";
+@import "./controls.css";
+@import "./content.css";
+@import "./effects.css";
+
+@custom-variant dark (&:is(.dark *));

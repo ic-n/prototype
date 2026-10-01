@@ -1,0 +1,34 @@
+.sidebar-mesh {
+  background:
+    radial-gradient(ellipse 70% 45% at 0% 100%, #96ffae29 0%, transparent 100%),
+    radial-gradient(ellipse 55% 40% at 100% 0%, #7ec4fc1f 0%, transparent 100%),
+    #00171f;
+}
+
+.header-mesh {
+  background:
+    radial-gradient(ellipse 25% 200% at 8% 50%, #96ffae17 0%, transparent 100%),
+    radial-gradient(ellipse 20% 200% at 92% 50%, #7ec4fc14 0%, transparent 100%),
+    #00171ff0;
+}
+
+.mobile-main {
+  scrollbar-gutter: stable;
+}
+
+.mobile-dock {
+  right: max(0.625rem, env(safe-area-inset-right));
+  bottom: calc(0.5rem + env(safe-area-inset-bottom));
+  left: max(0.625rem, env(safe-area-inset-left));
+  border: 1px solid #ffffff1a;
+  border-radius: 1.375rem;
+  background: #081317cc;
+  box-shadow: 0 12px 44px #0008;
+  backdrop-filter: saturate(150%) blur(12px);
+}
+
+@media (min-width: 768px) {
+  .mobile-dock {
+    display: none;
+  }
+}

@@ -1,0 +1,36 @@
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-ink-999: #081317;
+  --color-ink-950: #00171f;
+  --color-ink-900: #001a23;
+  --color-ink-800: #002633;
+  --color-ink-700: #003547;
+  --color-brand-200: #c3ffd1;
+  --color-brand-300: #b2ffc4;
+  --color-brand-400: #a3ffb8;
+  --color-brand-500: #96ffae;
+  --color-celadon-500: #7ec4fc;
+  --color-pollen-500: #f5b637;
+  --color-pink-500: #ef476f;
+}
+
+body {
+  --background: var(--color-slate-950);
+  --foreground: var(--color-white);
+  --surface: var(--color-slate-900);
+  --surface-foreground: var(--color-white);
+  --surface-secondary: var(--color-slate-800);
+  --surface-secondary-foreground: var(--color-white);
+  --overlay: var(--color-slate-900);
+  --overlay-foreground: var(--color-white);
+  --muted: var(--color-slate-400);
+  --accent: var(--color-brand-500);
+  --accent-foreground: var(--color-slate-950);
+  --focus: var(--color-brand-400);
+  --border: var(--color-slate-700);
+  --separator: var(--color-slate-800);
+  --radius: 0.75rem;
+}

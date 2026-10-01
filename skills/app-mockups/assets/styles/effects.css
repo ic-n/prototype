@@ -1,0 +1,16 @@
+.mockup-tape {
+  animation: mockup-marquee 55s linear infinite;
+}
+
+.mockup-tape-wrapper {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.mockup-tape-wrapper:hover .mockup-tape {
+  animation-play-state: paused;
+}
+
+@keyframes mockup-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
